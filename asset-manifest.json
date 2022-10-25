@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Select-Stars-Based-on-Ratings/static/css/main.1b91d1f0.css",
+    "main.js": "/Select-Stars-Based-on-Ratings/static/js/main.8d800111.js",
+    "index.html": "/Select-Stars-Based-on-Ratings/index.html",
+    "main.1b91d1f0.css.map": "/Select-Stars-Based-on-Ratings/static/css/main.1b91d1f0.css.map",
+    "main.8d800111.js.map": "/Select-Stars-Based-on-Ratings/static/js/main.8d800111.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1b91d1f0.css",
+    "static/js/main.8d800111.js"
+  ]
+}
