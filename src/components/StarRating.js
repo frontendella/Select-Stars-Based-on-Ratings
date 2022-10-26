@@ -1,33 +1,46 @@
-import React, { useState } from "react";
-import Star from "./Star";
+import React, { useState } from 'react';
+import Star from './Star';
 
-export default function StarRating() {
-  const [rating, setRating] = useState(null);
+const StarRating = () => {
+    // Initialize a 'courseRating' state
+    const [courseRating, setCourseRating] = useState(0);
 
-  // Write a function that returns 5 Star components
-  function Stars() {
-    let all_stars = [];
-    let maxRating = 5;
-    for (let i = 0; i < maxRating; i++) {
-      all_stars.push(
-        <Star
-          isSelected={rating > i}
-          setRating={() => handleSetRating(i + 1)}
-          key={i}
-        />
-      );
+
+    // Write a function that retuns 5 Star components
+    const renderStars = () => {
+        let stars = [];
+        const maxRating = 5;
+        for (let i = 0; i < maxRating; i++) {
+            stars.push(
+                <Star
+                    isSelected={courseRating > i}
+                    setRating={() => handleSetRating(i + 1)}
+                    key={i}
+                />
+            );
+        }
+        return stars;
     }
-    return all_stars;
-  }
-  // Write an event handler that updates the rating state.
-  function handleSetRating(rating_set) {
-    if (rating_set === rating) {
-      setRating({ rating_set: 0 });
-    } else {
-      setRating(rating_set);
-    }
-  }
-  // Pass the function to a Star component via props
 
-  return <ul className="course--stars">{Stars()}</ul>;
+
+    // Write an event handler that updates the courseRating state.
+    // Pass the function to a Star component via props
+    const handleSetRating = (rating) => {
+        if (courseRating === rating) {
+            setCourseRating(0);
+        } else {
+            setCourseRating(rating); 
+        }
+        
+    }
+
+
+    return (
+        <ul className='course--stars'>
+            {/* Render the Star components */}
+            {renderStars()}
+        </ul>
+    );
 }
+
+export default StarRating;

@@ -26,7 +26,7 @@ const courses = [
   {
     id: '5',
     name: 'React Components',
-    desc: 'This course will level-up your React skills by providing a better understanding of class vs. functional components, state and lifecycle methods, and how to split your UI into reusable and composable components.',
+    desc: 'This course will level-up your React skills by providing a better understanding of components, state and Hooks, and how to split your UI into reusable and composable components.',
     url: '/img/react-components.png' 
   },
   {
